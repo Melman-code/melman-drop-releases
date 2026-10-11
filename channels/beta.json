@@ -1,0 +1,11 @@
+{
+  "version": "0.0.6-beta.6",
+  "notes": "Подписанные обновления через GitHub. Тестовый выпуск для проверки обновления MELMAN Drop с beta.5.",
+  "pub_date": "2026-10-11T08:33:08Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://github.com/Melman-code/melman-drop-releases/releases/download/v0.0.6-beta.6/MELMAN-Drop-0.0.6-beta.6-x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUTUNDc1JvVGVvRU5jVU41OEpSQldiWHRWOURYK3p4VTMrZHB4QmZZOXF2RXcrQ25wMytpWS8xTkxxY2ZGaXIvd3FvSnE5Q2FOWks2dGVqcGtuSkJaMmhYcG9LTEg3OWdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNzA3NTg3CWZpbGU6TUVMTUFOIERyb3BfMC4wLjYtYmV0YS42X3g2NC1zZXR1cC5leGUJdmVyc2lvbjowLjAuNi1iZXRhLjYKN08wYjN5WkM2RWdRdVp2Z3VuRXVwTEVXUkR6akZCMVVJSXRkeHZFZlZJZFlqVTM4WTZ0cFlZZkNWSGZFNGNucWpNRVRweDlCSTdkQXNFTUJIelZOQ2c9PQo="
+    }
+  }
+}
