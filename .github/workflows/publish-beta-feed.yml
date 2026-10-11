@@ -47,7 +47,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git fetch origin main
           git merge --ff-only origin/main
-          cp staged-beta.json channels/beta.json
+          # The channel might have advanced while this release was being verified.
+          # Recheck against the newest main before committing (never downgrade).
+          node scripts/verify-release.mjs "${{ github.event.release.tag_name }}" downloads staged-beta-final.json
+          cp staged-beta-final.json channels/beta.json
           git add -- channels/beta.json
           git diff --cached --quiet && { echo "No changes to publish"; exit 0; }
           git commit -m "release(beta): verified ${{ github.event.release.tag_name }}"
