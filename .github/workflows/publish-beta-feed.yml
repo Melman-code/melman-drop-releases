@@ -1,0 +1,54 @@
+name: Verify published Beta and update feed
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: melman-public-beta-feed
+  cancel-in-progress: false
+
+jobs:
+  publish-beta-feed:
+    if: ${{ github.repository == 'Melman-code/melman-drop-releases' && github.event.release.prerelease && !github.event.release.draft }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Download exactly the published release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p downloads
+          gh release download "$RELEASE_TAG" -R Melman-code/melman-drop-releases -D downloads
+      - name: Verify minisign + SHA256 + public download and stage channel JSON
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/verify-release.mjs "$RELEASE_TAG" downloads staged-beta.json
+      - name: Update only beta.json (never stable)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git merge --ff-only origin/main
+          cp staged-beta.json channels/beta.json
+          git add -- channels/beta.json
+          git diff --cached --quiet && { echo "No changes to publish"; exit 0; }
+          git commit -m "release(beta): verified ${{ github.event.release.tag_name }}"
+          git push origin HEAD:main
