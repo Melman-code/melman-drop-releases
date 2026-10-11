@@ -1,11 +1,11 @@
 {
-  "version": "0.0.6-beta.6",
-  "notes": "Подписанные обновления через GitHub. Тестовый выпуск для проверки обновления MELMAN Drop с beta.5.",
-  "pub_date": "2026-10-11T08:33:08Z",
+  "version": "0.0.6-beta.8",
+  "notes": "MELMAN Drop 0.0.6-beta.8 — публичная тестовая версия Windows.\n\nЧто внутри:\n- Базовые модули MELMAN Drop, Shelf, музыка и локальные заметки.\n- Исправленная сетевая проверка подписанных обновлений через GitHub.\n- Настройки автозапуска Windows и канал Beta.\n- Подписанный установщик Tauri с проверкой целостности.\n\nВАЖНО: это ранняя Beta. Новые Apple-like виджеты календаря и заметок,\nа также новый брендированный русскоязычный установщик ещё в разработке\nи НЕ включены в этот выпуск.\n\nДля тестирования: скачайте EXE из Assets, закройте MELMAN Drop в трее\nи установите поверх существующей версии без предварительного удаления.\nПеред тестированием сохраните резервную копию важных заметок.\nСообщения об ошибках: https://t.me/melman_tech\n",
+  "pub_date": "2026-10-11T10:17:36Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://github.com/Melman-code/melman-drop-releases/releases/download/v0.0.6-beta.6/MELMAN-Drop-0.0.6-beta.6-x64-setup.exe",
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUTUNDc1JvVGVvRU5jVU41OEpSQldiWHRWOURYK3p4VTMrZHB4QmZZOXF2RXcrQ25wMytpWS8xTkxxY2ZGaXIvd3FvSnE5Q2FOWks2dGVqcGtuSkJaMmhYcG9LTEg3OWdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNzA3NTg3CWZpbGU6TUVMTUFOIERyb3BfMC4wLjYtYmV0YS42X3g2NC1zZXR1cC5leGUJdmVyc2lvbjowLjAuNi1iZXRhLjYKN08wYjN5WkM2RWdRdVp2Z3VuRXVwTEVXUkR6akZCMVVJSXRkeHZFZlZJZFlqVTM4WTZ0cFlZZkNWSGZFNGNucWpNRVRweDlCSTdkQXNFTUJIelZOQ2c9PQo="
+      "url": "https://github.com/Melman-code/melman-drop-releases/releases/download/v0.0.6-beta.8/MELMAN-Drop-0.0.6-beta.8-x64-setup.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUTUNDc1JvVGVvRUZhbVpiTnZucWE4SWdWUTg0ZG5xVStqdVhBYjEwQm1VbE4yNER1anpmbWdMVnF1OGNoVDBUQjkzNloycUtaR3p1M0J3UnJta0haTC9mTVZUQ3hzSkEwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNzEyMzE5CWZpbGU6TUVMTUFOIERyb3BfMC4wLjYtYmV0YS44X3g2NC1zZXR1cC5leGUJdmVyc2lvbjowLjAuNi1iZXRhLjgKNDlNTFlFeVhCZVFwUW1xTUJ6WkJpbEc5WFF3b1BpcWcrNm5PM3ppbjhSRVVGS2NFdlVFek5tL3hnRFdlMURmcHhGc1BRL25mUTVWY1hOWWZ6YlQxRGc9PQo="
     }
   }
 }
